@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Word Permutator</title>
+        <script src="./vue.min.js"></script>
+        
+    </head>
+    <body>
+        <div id="app">
+            <label for="letters">Letters in Puzzle</label>
+            <input id="letters" v-model="letters"/>
+            <button v-on:click="runHeap">Heap</button>
+            
+            <div>
+              <h2>Possible Words</h2>
+              <ul>
+                <li v-for="opt in optionsAlphabetical">
+                  {{opt}}
+                </li>
+            </div>
+            
+          </div>
+          <script src="index.js"></script>
+          <script src="words_dictionary.js"></script>
+    </body>
+</html>
