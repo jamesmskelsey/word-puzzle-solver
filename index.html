@@ -3,20 +3,52 @@
     <head>
         <title>Word Permutator</title>
         <script src="./vue.min.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="index.css"/>
     </head>
     <body>
         <div id="app">
-            <label for="letters">Letters in Puzzle</label>
-            <input id="letters" v-model="letters"/>
-            <button v-on:click="runHeap">Heap</button>
-            
+            <h2>Solve WordScapes Puzzles</h2>
             <div>
-              <h2>Possible Words</h2>
-              <ul>
-                <li v-for="opt in optionsAlphabetical">
-                  {{opt}}
-                </li>
+                <label for="letters">Letters in Puzzle</label>
+                <input v-on:keyup.enter="runHeap" id="letters" v-model="letters"/>
+                <button v-on:click="runHeap">Find words</button>
+            </div>
+            <div>
+              <div class="side">
+                  <h2>3 Letter Words</h2>
+                  <ul>
+                    <li v-for="opt in threeLetterWords">
+                      {{opt}}
+                    </li>
+                  </ul>
+              </div>
+              <div class="side">
+                  <h2>4 Letter Words</h2>
+                  <ul>
+                    <li v-for="opt in fourLetterWords">
+                      {{opt}}
+                    </li>
+                  </ul>
+                  
+              </div>
+              <div class="side">
+                  <h2>5 Letter Words</h2>
+                  <ul>
+                      <li v-for="opt in fiveLetterWords">
+                        {{opt}}
+                      </li>
+                    </ul>
+              </div>
+              <div class="side">
+                  <h2>6 Letter Words</h2>
+                  <ul>
+                    <li v-for="opt in sixLetterWords">
+                      {{opt}}
+                    </li>
+                  </ul>
+              </div>
+              
+              
             </div>
             
           </div>

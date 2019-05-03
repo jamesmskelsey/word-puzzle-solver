@@ -1,0 +1,29 @@
+body {
+    background: rgb(191, 191, 201);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.side {
+    float: left;
+    padding: 15px;
+}
+li {
+    font-size: 16px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #222;
+}
+
+button {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #222;
+    border-radius: 6px;
+}

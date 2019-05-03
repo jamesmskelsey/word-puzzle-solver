@@ -93,12 +93,23 @@ var app = new Vue({
             array[size-1] = temp;
           }
         }
+      },
+      filterByLength: function(arr, length) {
+        return arr.filter(e => e.length == length)
       }
     },
     computed: {
-      
-      optionsAlphabetical: function() {
-        return this.unfilteredOptions.sort();
+      threeLetterWords: function() {
+        return this.filterByLength(this.unfilteredOptions, 3).sort();
+      },
+      fourLetterWords: function() {
+        return this.filterByLength(this.unfilteredOptions, 4).sort();
+      },
+      fiveLetterWords: function() {
+        return this.filterByLength(this.unfilteredOptions, 5).sort();
+      },
+      sixLetterWords: function() {
+        return this.filterByLength(this.unfilteredOptions, 6).sort();
       }
     }
   })
